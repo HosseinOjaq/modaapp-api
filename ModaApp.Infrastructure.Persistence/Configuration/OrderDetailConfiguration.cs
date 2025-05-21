@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace ModaApp.Infrastructure.Persistence.Configuration;
 
-public class OrderDetailConfiguration : IEntityTypeConfiguration<OrderDetail>
+internal class OrderDetailConfiguration : IEntityTypeConfiguration<OrderDetail>
 {
     public void Configure(EntityTypeBuilder<OrderDetail> builder)
     {

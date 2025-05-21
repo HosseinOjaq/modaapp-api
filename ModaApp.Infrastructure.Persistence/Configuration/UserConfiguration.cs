@@ -43,4 +43,3 @@ internal class UserConfiguration : IEntityTypeConfiguration<User>
             .IsUnique();
     }
 }
-

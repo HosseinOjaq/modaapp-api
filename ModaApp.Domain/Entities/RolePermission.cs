@@ -9,7 +9,6 @@ public class RolePermission
     public int RoleId { get; private set; }
     public PermissionType PermissionId { get; private set; }
 
-
     public Permission? Permission { get; private set; }
     public Role? Role { get; private set; }
 

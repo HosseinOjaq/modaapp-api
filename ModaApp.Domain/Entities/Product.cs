@@ -9,12 +9,9 @@ public class Product
     public int DiscountId { get; set; }
     public bool Active { get; set; }
 
-
-
     public Discount Discount { get; set; } = default!;
     public Brand Brand { get; set; } = default!;
     public Category Category { get; set; } = default!;
-
 
     public ICollection<ShoppingItem> ShoppingItems { get; set; } = default!;
     public ICollection<ProductFile> ProductFiles { get; set; } = default!;

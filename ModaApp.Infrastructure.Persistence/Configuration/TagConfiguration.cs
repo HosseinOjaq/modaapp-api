@@ -5,7 +5,7 @@ using ModaApp.Infrastructure.Persistence.Extensions;
 
 namespace ModaApp.Infrastructure.Persistence.Configuration;
 
-public class TagConfiguration : IEntityTypeConfiguration<Tag>
+internal class TagConfiguration : IEntityTypeConfiguration<Tag>
 {
     public void Configure(EntityTypeBuilder<Tag> builder)
     {

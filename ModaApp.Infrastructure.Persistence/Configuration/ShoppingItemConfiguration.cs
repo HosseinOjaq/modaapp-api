@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace ModaApp.Infrastructure.Persistence.Configuration;
 
-public class ShoppingItemConfiguration : IEntityTypeConfiguration<ShoppingItem>
+internal class ShoppingItemConfiguration : IEntityTypeConfiguration<ShoppingItem>
 {
     public void Configure(EntityTypeBuilder<ShoppingItem> builder)
     {

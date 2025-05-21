@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace ModaApp.Infrastructure.Persistence.Configuration;
 
-public class ProductColorConfiguration : IEntityTypeConfiguration<ProductColor>
+internal class ProductColorConfiguration : IEntityTypeConfiguration<ProductColor>
 {
     public void Configure(EntityTypeBuilder<ProductColor> builder)
     {
