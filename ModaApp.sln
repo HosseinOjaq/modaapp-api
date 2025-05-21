@@ -4,6 +4,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModaApp.Api", "ModaApp.Api\ModaApp.Api.csproj", "{59F8A3B7-59A1-40AD-98B6-3C903D3FD186}"
+	ProjectSection(ProjectDependencies) = postProject
+		{14180D96-D864-45E5-A1C1-D47684832B05} = {14180D96-D864-45E5-A1C1-D47684832B05}
+		{56B52384-5A71-4D70-9818-D952CFFC2876} = {56B52384-5A71-4D70-9818-D952CFFC2876}
+		{925ABC92-BE94-4233-8299-0D2C5F1FFE75} = {925ABC92-BE94-4233-8299-0D2C5F1FFE75}
+		{9F4A2E46-DA9E-4965-B523-38AC6730050D} = {9F4A2E46-DA9E-4965-B523-38AC6730050D}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -16,6 +22,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{73174A6C-A355-4A38-8226-AC30E8F76124}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModaApp.WebFramework", "ModaApp.WebFramework\ModaApp.WebFramework.csproj", "{14180D96-D864-45E5-A1C1-D47684832B05}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F7F9FED0-F803-44DD-B0B9-40B59BB7DC31} = {F7F9FED0-F803-44DD-B0B9-40B59BB7DC31}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModaApp.Application", "ModaApp.Application\ModaApp.Application.csproj", "{9F4A2E46-DA9E-4965-B523-38AC6730050D}"
 EndProject
