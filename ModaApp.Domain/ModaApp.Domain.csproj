@@ -6,4 +6,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Attributes\" />
+    <Folder Include="Caching\" />
+    <Folder Include="Configuration\" />
+    <Folder Include="Dtos\" />
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
 </Project>
