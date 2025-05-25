@@ -9,7 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+	  <PackageReference Include="Autofac" Version="8.1.1" />
+	  <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="10.0.0" />
+	  <PackageReference Include="Autofac.Extras.DynamicProxy2" Version="3.0.7" />
+	  <PackageReference Include="Castle.Core.AsyncInterceptor" Version="2.1.0" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	  <PackageReference Include="Swashbuckle.AspNetCore" Version="6.9.0" />
   </ItemGroup>
 	
 	<ItemGroup>
