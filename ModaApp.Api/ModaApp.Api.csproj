@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
 	  <TargetFramework>net8.0</TargetFramework>
@@ -19,8 +19,12 @@
 	  </PackageReference>
 	  <PackageReference Include="Swashbuckle.AspNetCore" Version="6.9.0" />
   </ItemGroup>
-	
-	<ItemGroup>
-		<ProjectReference Include="..\ModaApp.WebFramework\ModaApp.WebFramework.csproj" />
-	</ItemGroup>
+
+  <ItemGroup>
+	  <ProjectReference Include="..\ModaApp.Application\ModaApp.Application.csproj" />
+	  <ProjectReference Include="..\ModaApp.Infrastructure.Persistence\ModaApp.Infrastructure.Persistence.csproj" />
+	  <ProjectReference Include="..\ModaApp.Infrastructure\ModaApp.Infrastructure.csproj" />
+	  <ProjectReference Include="..\ModaApp.Application\ModaApp.Application.csproj" />
+	  <ProjectReference Include="..\ModaApp.WebFramework\ModaApp.WebFramework.csproj" />
+  </ItemGroup>
 </Project>

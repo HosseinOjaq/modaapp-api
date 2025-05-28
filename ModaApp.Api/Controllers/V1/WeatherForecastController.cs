@@ -1,8 +1,10 @@
+using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ModaApp.Api.Controllers
+namespace ModaApp.Api.Controllers.V1
 {
     [ApiController]
+    [ApiVersion("1")]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {

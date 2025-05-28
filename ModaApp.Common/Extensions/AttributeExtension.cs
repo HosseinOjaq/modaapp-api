@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Edition.Common.Extensions;
+namespace ModaApp.Common.Extensions;
 
 public static class AttributeExtension
 {

@@ -1,6 +1,6 @@
 ﻿using Pluralize.NET;
 using Microsoft.OpenApi.Models;
-using Edition.Common.Extensions;
+using ModaApp.Common.Extensions;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using ModaApp.Common.Extensions;

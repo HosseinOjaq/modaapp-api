@@ -28,4 +28,26 @@ public class User
     public ICollection<ProductRating> ProductRatings { get; set; } = default!;
     public ICollection<UserAddress> UserAddresses { get; private set; } = default!;
     public ICollection<UserRole> UserRoles { get; private set; } = default!;
+
+
+    public static User Create(string email, GenderType gender, string username,
+                          string firstName, string lastName, string phoneNumber,
+                          string passwordHash, string securityStamp)
+    => new()
+    {
+        Email = email,
+        Gender = gender,
+        UserName = username,
+        LastName = lastName,
+        FirstName = firstName,
+        PhoneNumber = phoneNumber,
+        PasswordHash = passwordHash,
+        SecurityStamp = securityStamp
+    };
+
+    public User SetUserRoles(List<UserRole> userRoles)
+    {
+        UserRoles = userRoles;
+        return this;
+    }
 }

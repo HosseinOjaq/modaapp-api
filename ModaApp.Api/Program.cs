@@ -1,14 +1,23 @@
+using ModaApp.Application;
 using ModaApp.Common.Models;
+using ModaApp.Infrastructure;
+using ModaApp.Api.Extensions;
 using ModaApp.WebFramework.Swagger;
-using Edition.WebFramework.Middlewares;
+using ModaApp.WebFramework.Middlewares;
 using ModaApp.WebFramework.Configuration;
+using ModaApp.Infrastructure.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.AddAutofactServiceProviderAndInterceptors();
+
 builder.Services.AddCustomApiVersioning();
 builder.Services.AddControllers();
 builder.Services.AddCustomCors();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.RegisterApplicationServices()
+                .RegisterInfrastructureServices(builder.Configuration)
+                .RegisterPersistenceServices(builder.Configuration);
 var siteSettingsConfiguration = builder.Configuration.GetSection(nameof(SiteSettings));
 var siteSettings = siteSettingsConfiguration.Get<SiteSettings>();
 
