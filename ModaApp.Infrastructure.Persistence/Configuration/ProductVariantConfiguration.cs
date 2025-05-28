@@ -8,6 +8,9 @@ internal class ProductVariantConfiguration : IEntityTypeConfiguration<ProductVar
 {
     public void Configure(EntityTypeBuilder<ProductVariant> builder)
     {
+        builder.Property(p => p.Price)
+       .HasPrecision(18, 2);
+
         builder.HasOne(p => p.ProductSize)
             .WithMany(c => c.ProductVariants)
             .HasForeignKey(p => p.ProductSizeId)

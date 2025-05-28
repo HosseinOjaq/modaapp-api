@@ -28,11 +28,11 @@ public sealed class ModaAppDbContext
     public DbSet<ProductColor> ProductColor { get; set; }
     public DbSet<Payment> Payment { get; set; }
     public DbSet<OrderDetail> OrderDetail { get; set; }
-    public DbSet<Category>  Categorie { get; set; }
-    public DbSet<Brand>  Brand { get; set; }
-    public DbSet<PageVisit>  PageVisits { get; set; }
-    public DbSet<ProductLike>  ProductLike { get; set; }
-    public DbSet<ProductRating>  ProductRating { get; set; }
+    public DbSet<Category> Categorie { get; set; }
+    public DbSet<Brand> Brand { get; set; }
+    public DbSet<PageVisit> PageVisits { get; set; }
+    public DbSet<ProductLike> ProductLike { get; set; }
+    public DbSet<ProductRating> ProductRating { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -43,6 +43,11 @@ public sealed class ModaAppDbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
+        modelBuilder.HasSequence<int>("OrderCodeSequence", schema: "dbo")
+                    .StartsAt(1000)
+                    .IncrementsBy(1);
+
         base.OnModelCreating(modelBuilder);
     }
 }

@@ -12,11 +12,11 @@ internal class ProductLikesConfiguration : IEntityTypeConfiguration<ProductLike>
         builder.HasOne<Product>()
                .WithMany(p => p.productLikes)
                .HasForeignKey(x => x.ProductId)
-               .OnDelete(DeleteBehavior.Cascade);
+               .OnDelete(DeleteBehavior.Restrict);
 
-        builder.HasOne<User>()
-               .WithMany(p => p.productLikes)
-               .HasForeignKey(x => x.UserId)
-               .OnDelete(DeleteBehavior.Cascade);
+        builder.HasOne(pl => pl.User)
+               .WithMany(u => u.productLikes)
+               .HasForeignKey(pl => pl.UserId)
+               .OnDelete(DeleteBehavior.Restrict);
     }
 }
