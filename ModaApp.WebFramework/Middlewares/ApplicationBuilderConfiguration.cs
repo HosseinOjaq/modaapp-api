@@ -2,7 +2,7 @@
 using ModaApp.WebFramework.Middlewares;
 using Microsoft.AspNetCore.HttpOverrides;
 
-namespace Edition.WebFramework.Middlewares;
+namespace ModaApp.WebFramework.Middlewares;
 
 public static class ApplicationBuilderConfiguration
 {

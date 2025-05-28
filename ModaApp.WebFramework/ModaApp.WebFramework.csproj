@@ -22,7 +22,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\ModaApp.Common\ModaApp.Common.csproj" />
+	  <ProjectReference Include="..\ModaApp.Common\ModaApp.Common.csproj" />
 	</ItemGroup>
+
 
 </Project>
