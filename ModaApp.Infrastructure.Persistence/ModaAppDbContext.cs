@@ -33,6 +33,7 @@ public sealed class ModaAppDbContext
     public DbSet<PageVisit> PageVisits { get; set; }
     public DbSet<ProductLike> ProductLike { get; set; }
     public DbSet<ProductRating> ProductRating { get; set; }
+    public DbSet<RefreshToken> RefreshToken { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

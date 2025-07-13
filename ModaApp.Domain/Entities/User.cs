@@ -24,11 +24,11 @@ public class User
     public ICollection<Order> Orders { get; set; } = default!;
     public ICollection<Product> Products { get; set; } = default!;
     public ICollection<ProductLike> productLikes { get; set; } = default!;
+    public ICollection<UserRole> UserRoles { get; private set; } = default!;
     public ICollection<ShoppingItem> ShippingItems { get; set; } = default!;
     public ICollection<ProductRating> ProductRatings { get; set; } = default!;
     public ICollection<UserAddress> UserAddresses { get; private set; } = default!;
-    public ICollection<UserRole> UserRoles { get; private set; } = default!;
-
+    public ICollection<RefreshToken> RefreshTokens { get; private set; } = default!;
 
     public static User Create(string email, GenderType gender, string username,
                           string firstName, string lastName, string phoneNumber,
